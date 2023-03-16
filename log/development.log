@@ -462,3 +462,257 @@ Processing by PizzasController#index as HTML
 Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1339)
 
 
+Started GET "/" for ::1 at 2023-03-16 14:43:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ghost/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ghost/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 219.9ms | Allocations: 660)
+Completed 200 OK in 368ms (Views: 231.5ms | ActiveRecord: 0.0ms | Allocations: 5395)
+
+
+Started GET "/" for ::1 at 2023-03-16 14:43:58 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ghost/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ghost/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 449)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 1152)
+
+
+Started GET "/restaurants/Restaurants_pizza" for ::1 at 2023-03-16 14:44:05 +0300
+Processing by RestaurantsController#Restaurants_pizza as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/Restaurants_pizza.html.erb within layouts/application
+  Rendered restaurants/Restaurants_pizza.html.erb within layouts/application (Duration: 129.5ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 275.7ms | Allocations: 8916)
+Completed 200 OK in 279ms (Views: 278.9ms | ActiveRecord: 0.0ms | Allocations: 9631)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-03-16 14:44:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/restaurants/Pizza" for ::1 at 2023-03-16 14:45:28 +0300
+Processing by RestaurantsController#Pizza as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/Pizza.html.erb within layouts/application
+  Rendered restaurants/Pizza.html.erb within layouts/application (Duration: 214.4ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 221.6ms | Allocations: 1211)
+Completed 200 OK in 223ms (Views: 222.7ms | ActiveRecord: 0.0ms | Allocations: 1432)
+
+
+Started GET "/Pizza" for ::1 at 2023-03-16 14:46:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/Pizza"):
+  
+Started GET "/pizzas" for ::1 at 2023-03-16 14:46:24 +0300
+Processing by PizzasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pizzas/index.html.erb within layouts/application
+  Rendered pizzas/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 1226)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 1848)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sottocasa NYC"], ["address", "298 Atlantic Ave, Brooklyn, NY 11201"], ["created_at", "2023-03-16 11:46:42.467258"], ["updated_at", "2023-03-16 11:46:42.467258"]]
+  [1m[36mTRANSACTION (254.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "PizzArte"], ["address", "69 W 55th St, New York, NY 10019"], ["created_at", "2023-03-16 11:46:42.737232"], ["updated_at", "2023-03-16 11:46:42.737232"]]
+  [1m[36mTRANSACTION (202.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Di Fara Pizza"], ["address", "1424 Avenue J, Brooklyn, NY 11230"], ["created_at", "2023-03-16 11:46:42.949217"], ["updated_at", "2023-03-16 11:46:42.949217"]]
+  [1m[36mTRANSACTION (408.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPizza Create (0.3ms)[0m  [1m[32mINSERT INTO "pizzas" ("name", "ingredients", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cheese"], ["ingredients", "Dough, Tomato Sauce, Cheese"], ["created_at", "2023-03-16 11:46:43.406268"], ["updated_at", "2023-03-16 11:46:43.406268"]]
+  [1m[36mTRANSACTION (522.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPizza Create (1.0ms)[0m  [1m[32mINSERT INTO "pizzas" ("name", "ingredients", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pepperoni"], ["ingredients", "Dough, Tomato Sauce, Cheese, Pepperoni"], ["created_at", "2023-03-16 11:46:43.934938"], ["updated_at", "2023-03-16 11:46:43.934938"]]
+  [1m[36mTRANSACTION (112.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPizza Create (0.3ms)[0m  [1m[32mINSERT INTO "pizzas" ("name", "ingredients", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Margherita"], ["ingredients", "Dough, Tomato Sauce, Mozzarella, Basil"], ["created_at", "2023-03-16 11:46:44.057317"], ["updated_at", "2023-03-16 11:46:44.057317"]]
+  [1m[36mTRANSACTION (174.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurantPizza Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "restaurant_id", "pizza_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 10], ["restaurant_id", 4], ["pizza_id", 4], ["created_at", "2023-03-16 11:46:44.367224"], ["updated_at", "2023-03-16 11:46:44.367224"]]
+  [1m[36mTRANSACTION (167.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurantPizza Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "restaurant_id", "pizza_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 12], ["restaurant_id", 4], ["pizza_id", 5], ["created_at", "2023-03-16 11:46:44.546488"], ["updated_at", "2023-03-16 11:46:44.546488"]]
+  [1m[36mTRANSACTION (125.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurantPizza Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "restaurant_id", "pizza_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 9], ["restaurant_id", 5], ["pizza_id", 4], ["created_at", "2023-03-16 11:46:44.679176"], ["updated_at", "2023-03-16 11:46:44.679176"]]
+  [1m[36mTRANSACTION (259.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurantPizza Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "restaurant_id", "pizza_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 11], ["restaurant_id", 5], ["pizza_id", 5], ["created_at", "2023-03-16 11:46:44.944844"], ["updated_at", "2023-03-16 11:46:44.944844"]]
+  [1m[36mTRANSACTION (140.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurantPizza Create (1.0ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "restaurant_id", "pizza_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 13], ["restaurant_id", 5], ["pizza_id", 6], ["created_at", "2023-03-16 11:46:45.091975"], ["updated_at", "2023-03-16 11:46:45.091975"]]
+  [1m[36mTRANSACTION (131.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurantPizza Create (1.2ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "restaurant_id", "pizza_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 8], ["restaurant_id", 6], ["pizza_id", 4], ["created_at", "2023-03-16 11:46:45.237537"], ["updated_at", "2023-03-16 11:46:45.237537"]]
+  [1m[36mTRANSACTION (196.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurantPizza Create (1.2ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "restaurant_id", "pizza_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 14], ["restaurant_id", 6], ["pizza_id", 6], ["created_at", "2023-03-16 11:46:45.447192"], ["updated_at", "2023-03-16 11:46:45.447192"]]
+  [1m[36mTRANSACTION (119.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRestaurantPizzas (20230316082653)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (19.7ms)[0m  [1m[35mDROP TABLE "restaurant_pizzas"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230316082653"]]
+  [1m[36mTRANSACTION (175.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRestaurantPizzas (20230316082653)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "restaurant_pizzas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "price" integer, "restaurant_id" integer NOT NULL, "pizza_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f279821f06"
+FOREIGN KEY ("restaurant_id")
+  REFERENCES "restaurants" ("id")
+, CONSTRAINT "fk_rails_ab3bb148dc"
+FOREIGN KEY ("pizza_id")
+  REFERENCES "pizzas" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_restaurant_pizzas_on_restaurant_id" ON "restaurant_pizzas" ("restaurant_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_restaurant_pizzas_on_pizza_id" ON "restaurant_pizzas" ("pizza_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230316082653"]]
+  [1m[36mTRANSACTION (108.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/pizzas" for ::1 at 2023-03-16 14:50:49 +0300
+Processing by PizzasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pizzas/index.html.erb within layouts/application
+  Rendered pizzas/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1118)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 1692)
+
+
+Started GET "/restaurants" for ::1 at 2023-03-16 14:51:15 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 1.6ms | Allocations: 19999)
+
+
+Started GET "/restaurants" for ::1 at 2023-03-16 14:51:20 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 1291)
+
+
+Started GET "/restaurants" for ::1 at 2023-03-16 14:51:22 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 1303)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/restaurants" for ::1 at 2023-03-16 14:51:47 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 2.5ms | Allocations: 5376)
+
+
+Started GET "/restaurant_pizzas" for ::1 at 2023-03-16 14:51:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizzas"):
+  
+Started GET "/restaurant_pizza" for ::1 at 2023-03-16 14:52:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizza"):
+  
+Started GET "/restaurant_pizza" for ::1 at 2023-03-16 14:52:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizza"):
+  
+Started GET "/restaurants/show" for ::1 at 2023-03-16 14:52:56 +0300
+Processing by RestaurantsController#show as HTML
+Completed 404 Not Found in 16ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2958)
+
+
+Started GET "/restaurants/show" for ::1 at 2023-03-16 14:59:25 +0300
+Processing by RestaurantsController#show as HTML
+Completed 404 Not Found in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3091)
+
+
+Started GET "/restaurants" for ::1 at 2023-03-16 14:59:30 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 2388)
+
+
+Started GET "/pizzas" for ::1 at 2023-03-16 14:59:41 +0300
+  
+NameError (undefined local variable or method `nd' for main:Object):
+  
+app/controllers/pizzas_controller.rb:52:in `<main>'
+Started GET "/pizzas" for ::1 at 2023-03-16 14:59:41 +0300
+  
+NameError (undefined local variable or method `nd' for main:Object):
+  
+app/controllers/pizzas_controller.rb:52:in `<main>'
+Started GET "/pizzas" for ::1 at 2023-03-16 14:59:53 +0300
+  
+SyntaxError (/home/ghost/RUBY_ON_RAILS/week-1/code_challenge/PizzaQuest/app/controllers/pizzas_controller.rb:52: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/pizzas_controller.rb:52: syntax error, unexpected `end', expecting end-of-input
+app/controllers/pizzas_controller.rb:52: syntax error, unexpected `end', expecting end-of-input
+app/controllers/pizzas_controller.rb:52: syntax error, unexpected `end', expecting end-of-input
+Started GET "/pizzas" for ::1 at 2023-03-16 15:00:24 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:7:in `index'
+Completed 200 OK in 55ms (Views: 19.5ms | ActiveRecord: 1.5ms | Allocations: 17666)
+
+
+Started GET "/restaurants" for ::1 at 2023-03-16 15:00:42 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 17.8ms | ActiveRecord: 2.2ms | Allocations: 5385)
+
+
+Started GET "/restaurants_pizza" for ::1 at 2023-03-16 15:00:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants_pizza"):
+  
+Started GET "/restaurants_pizza" for ::1 at 2023-03-16 15:00:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants_pizza"):
+  
+Started GET "/restaurants_pizzas" for ::1 at 2023-03-16 15:01:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants_pizzas"):
+  
+Started GET "/restaurant_pizzas" for ::1 at 2023-03-16 15:01:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizzas"):
+  
+Started GET "/restaurant_pizzas" for ::1 at 2023-03-16 15:01:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizzas"):
+  
+Started GET "/Restaurants/restaurant_pizzas" for ::1 at 2023-03-16 15:02:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/Restaurants/restaurant_pizzas"):
+  
+Started GET "/restaurants/restaurant_pizzas" for ::1 at 2023-03-16 15:02:09 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"restaurant_pizzas"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 404 Not Found in 8ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2013)
+
+

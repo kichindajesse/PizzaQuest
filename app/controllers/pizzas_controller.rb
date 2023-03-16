@@ -1,36 +1,53 @@
 class PizzasController < ApplicationController
+  before_action :set_pizza, only: [:show, :update, :destroy]
+
+  # GET /pizzas
+  def index
+    @pizzas = Pizza.all
+    render json: @pizzas
+  end
+
+  # GET /pizzas/1
+  def show
+    render json: @pizza
+  end
+
+  # POST /pizzas
   def create
     @pizza = Pizza.new(pizza_params)
+
     if @pizza.save
-      render json: @pizza, status: :created
+      render json: @pizza, status: :created, location: @pizza
     else
-      render json: { errors: @pizza.errors.full_messages }, status: :unprocessable_entity
+      render json: @pizza.errors, status: :unprocessable_entity
     end
   end
 
+  # PATCH/PUT /pizzas/1
   def update
-    @pizza = Pizza.find(params[:id])
     if @pizza.update(pizza_params)
       render json: @pizza
     else
-      render json: { errors: @pizza.errors.full_messages }, status: :unprocessable_entity
+      render json: @pizza.errors, status: :unprocessable_entity
     end
-  rescue ActiveRecord::RecordNotFound
-    render json: { error: "Pizza not found" }, status: :not_found
   end
 
+  # DELETE /pizzas/1
   def destroy
-    @pizza = Pizza.find(params[:id])
     @pizza.destroy
     head :no_content
-  rescue ActiveRecord::RecordNotFound
-    render json: { error: "Pizza not found" }, status: :not_found
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_pizza
+      @pizza = Pizza.find(params[:id])
+    end
 
-  def pizza_params
-    params.require(:pizza).permit(:name, :description, :price, :restaurant_id)
-  end
+    # Only allow a trusted parameter "white list" through.
+    def pizza_params
+      params.require(:pizza).permit(:name, :description, :price, :restaurant_id)
+    end
 end
+
 
