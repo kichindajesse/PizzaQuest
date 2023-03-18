@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
-    render json: @restaurants
+    render json: @restaurants, include: [:pizzas]
   end
 
   def show
@@ -19,3 +19,4 @@ class RestaurantsController < ApplicationController
     render json: { error: "Restaurant not found" }, status: :not_found
   end
 end
+
