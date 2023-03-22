@@ -1,18 +1,19 @@
 class RestaurantPizzasController < ApplicationController
-  def create
-    restaurant_pizza = RestaurantPizza.new(restaurant_pizza_params)
-
-    if restaurant_pizza.save
-      redirect_to restaurant_path(restaurant_pizza.restaurant_id), notice: 'Pizza added successfully'
-    else
-      redirect_to restaurant_path(restaurant_pizza.restaurant_id), alert: 'Pizza could not be added'
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+    wrap_parameters format: []
+    def create
+        restaurant_pizza = RestaurantPizza.create!(restaurant_pizzas_params)
+        pizza = Pizza.find_by(id: params[:pizza_id])
+        render json: pizza, status: :created
     end
-  end
 
-  private
+    private
 
-  def restaurant_pizza_params
-    params.require(:restaurant_pizza).permit(:restaurant_id, :pizza_id)
-  end
+    def restaurant_pizzas_params
+        params.permit(:price, :pizza_id, :restaurant_id)
+    end
+
+    def render_unprocessable_entity_response(invalid)
+        render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+    end
 end
-
